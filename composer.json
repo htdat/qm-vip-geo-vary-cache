@@ -1,0 +1,10 @@
+{
+    "name": "htdat/qm-vip-geo-vary-cache",
+    "description": "Show Geolocation and Personalziation Cache info in Query Monitor",
+    "type": "package",
+    "require-dev": {
+        "automattic/vipwpcs": "^2.2.0"
+    },
+    "license": "GPL v2 or later",
+    "require": {}
+}
