@@ -11,6 +11,6 @@ class QM_Collector_VIP_Go_Geo_Uniques extends QM_Collector {
 	 * @return string
 	 */
 	public function name() {
-		return esc_html__( 'VIP Go Geo Uniques', 'query-monitor' );
+		return esc_html__( 'VIP Go Geo Uniques', 'qm-vip-geo-vary-cache' );
 	}
 }

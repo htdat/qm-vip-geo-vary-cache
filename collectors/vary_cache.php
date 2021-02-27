@@ -11,6 +11,6 @@ class QM_Collector_VIP_Vary_Cache extends QM_Collector {
 	 * @return string
 	 */
 	public function name() {
-		return esc_html__( 'VIP Vary Cache', 'query-monitor' );
+		return esc_html__( 'VIP Vary Cache', 'qm-vip-geo-vary-cache' );
 	}
 }

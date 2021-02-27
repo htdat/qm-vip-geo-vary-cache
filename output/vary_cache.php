@@ -42,7 +42,7 @@ class QM_Output_VIP_Vary_Cache extends \QM_Output_Html {
 		if ( count( $groups ) < 1 ) {
 			$this->before_non_tabular_output();
 			echo '<section>';
-			echo '<h3>' . esc_html__( 'No group is defined.', 'query-monitor' ) . '</h3>';		
+			echo '<h3>' . esc_html__( 'No group is defined.', 'qm-vip-geo-vary-cache' ) . '</h3>';
 			echo '</section>';
 			$this->after_non_tabular_output();
 			return;	
@@ -52,8 +52,8 @@ class QM_Output_VIP_Vary_Cache extends \QM_Output_Html {
 
 		echo '<thead>';
 		echo '<tr>';
-		echo '<th scope="col">' . esc_html__( 'Group', 'query-monitor' ) . '</th>';
-		echo '<th scope="col">' . esc_html__( 'Value', 'query-monitor' ) . '</th>';
+		echo '<th scope="col">' . esc_html__( 'Group', 'qm-vip-geo-vary-cache' ) . '</th>';
+		echo '<th scope="col">' . esc_html__( 'Value', 'qm-vip-geo-vary-cache' ) . '</th>';
 		echo '</tr>';
 		echo '</thead>';
 
