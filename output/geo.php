@@ -40,11 +40,11 @@ class QM_Output_VIP_Go_Geo_Uniques extends QM_Output_Html {
 		echo '<ul>'; 
 		echo '<li>'; 
 		echo esc_html__( 'Current country code: ', 'query-monitor' ); 
-		echo '<code>' . esc_attr( VIP_Go_Geo_Uniques::get_country_code() ). '</code>';
+		echo '<code>' . esc_html( VIP_Go_Geo_Uniques::get_country_code() ). '</code>';
 		echo '</li>'; 
 		echo '<li>'; 
 		echo esc_html__( 'Registered country codes: ', 'query-monitor' ); 
-		echo '<code>' . esc_attr( implode( ' | ', VIP_Go_Geo_Uniques::get_registered_locations() ) ) . '</code>'; 
+		echo '<code>' . esc_html( implode( ' | ', VIP_Go_Geo_Uniques::get_registered_locations() ) ) . '</code>'; 
 		echo '</li>';
 		echo '</ul>';
 		

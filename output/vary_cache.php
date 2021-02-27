@@ -60,8 +60,8 @@ class QM_Output_VIP_Vary_Cache extends \QM_Output_Html {
 		echo '<tbody>';
 		foreach ($groups as $group => $value) {
 			echo '<tr>';
-			echo '<td class="qm-ltr">' . esc_attr( $group ) . '</td>'; 
-			echo '<td class="qm-ltr">' . esc_attr( $value ) . '</td>'; 
+			echo '<td class="qm-ltr">' . esc_html( $group ) . '</td>'; 
+			echo '<td class="qm-ltr">' . esc_html( $value ) . '</td>'; 
 			echo '</tr>';
 
 		}
