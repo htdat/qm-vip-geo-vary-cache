@@ -8,17 +8,25 @@
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
+add_action( 'plugins_loaded', function() {
 
-add_action( 'plugins_loaded', 'qm_vip_geo' );
-add_action( 'plugins_loaded', 'qm_vip_vary_cache' );
+    // Do not load if Query Monitor is not active
+    if ( ! class_exists ( 'QueryMonitor' ) ) {
+        return;
+    }
+
+    if ( class_exists ( 'VIP_Go_Geo_Uniques' ) ) {
+        qm_vip_geo();
+    }
+
+    if ( class_exists ( '\Automattic\VIP\Cache\Vary_Cache' ) ) {
+        qm_vip_vary_cache();
+    }
+
+} );
 
 // Load files for VIP Go Geo Uniques
 function qm_vip_geo() {
-
-    if ( ! class_exists ( 'VIP_Go_Geo_Uniques' ) ) {
-        return; 
-    }
-
     add_filter( 'qm/collectors', 
         function ( array $collectors, QueryMonitor $qm ) {
             require_once ( 'collectors/geo.php' ); 
@@ -36,17 +44,11 @@ function qm_vip_geo() {
             }
             return $output;   
         }, 
-    10, 1 );        
-
+    10, 1 );
 }
 
 // Load files for VIP Go Vary Cache
 function qm_vip_vary_cache() {
-
-    if ( ! class_exists ( '\Automattic\VIP\Cache\Vary_Cache' ) ) {
-        return; 
-    }
-
     add_filter( 'qm/collectors', 
         function ( array $collectors, QueryMonitor $qm ) {
             require_once ( 'collectors/vary_cache.php' ); 
@@ -64,6 +66,5 @@ function qm_vip_vary_cache() {
             }
             return $output;   
         }, 
-    10, 1 );   
-
+    10, 1 );
 }
