@@ -39,7 +39,7 @@ class QM_Output_VIP_Vary_Cache extends \QM_Output_Html {
 
 		$groups = Vary_Cache::get_groups(); 
 
-		if ( count( $groups ) < 1 ) {
+		if ( ! is_array( $groups ) || count( $groups ) < 1 ) {
 			$this->before_non_tabular_output();
 			echo '<section>';
 			echo '<h3>' . esc_html__( 'No group is defined.', 'qm-vip-geo-vary-cache' ) . '</h3>';
