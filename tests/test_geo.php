@@ -15,13 +15,14 @@ class QM_VIP_Geo_Test extends WP_UnitTestCase {
 
 		wp_set_current_user( $admin->ID );
 
+		$this->assertTrue( class_exists( 'VIP_Go_Geo_Uniques' ) ); 
+		$this->assertTrue( class_exists( 'QueryMonitor' ) ); 
+
 		// Set up some values for VIP_Go_Geo_Uniques
-		if ( class_exists( 'VIP_Go_Geo_Uniques' ) ) {
 			VIP_Go_Geo_Uniques::set_default_location( 'US' );
 			VIP_Go_Geo_Uniques::add_location( 'GB' );
 			VIP_Go_Geo_Uniques::add_location( 'SG' );
 			VIP_Go_Geo_Uniques::add_location( 'ES' );
-		}
 		
 		if ( ! defined( 'WP_USE_THEMES' ) ){
 			define( 'WP_USE_THEMES', true);
@@ -38,9 +39,6 @@ class QM_VIP_Geo_Test extends WP_UnitTestCase {
 	}
 
 	public function test_output_include_registered_codes() {
-		$this->assertTrue ( class_exists( 'VIP_Go_Geo_Uniques' ) ); 
-		$this->assertTrue ( class_exists( 'QueryMonitor' ) ); 
-
 		$this->go_to( 'wp-admin' );
 
 		ob_start();
