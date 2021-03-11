@@ -19,10 +19,10 @@ class QM_VIP_Geo_Test extends WP_UnitTestCase {
 		$this->assertTrue( class_exists( 'QueryMonitor' ) ); 
 
 		// Set up some values for VIP_Go_Geo_Uniques
-			VIP_Go_Geo_Uniques::set_default_location( 'US' );
-			VIP_Go_Geo_Uniques::add_location( 'GB' );
-			VIP_Go_Geo_Uniques::add_location( 'SG' );
-			VIP_Go_Geo_Uniques::add_location( 'ES' );
+		VIP_Go_Geo_Uniques::set_default_location( 'US' );
+		VIP_Go_Geo_Uniques::add_location( 'GB' );
+		VIP_Go_Geo_Uniques::add_location( 'SG' );
+		VIP_Go_Geo_Uniques::add_location( 'ES' );
 		
 		if ( ! defined( 'WP_USE_THEMES' ) ){
 			define( 'WP_USE_THEMES', true);
