@@ -25,3 +25,4 @@ tests_add_filter( 'muplugins_loaded', function() use ($_tests_dir)  {
 // Load bootstrap from vip-go-mu-plugins-built 
 require_once $_tests_dir . '/vip-go-mu-plugins-built/tests/bootstrap.php';
 
+require_once __DIR__ . '/base_test.php'; 
