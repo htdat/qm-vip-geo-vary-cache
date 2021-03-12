@@ -12,6 +12,10 @@ class QM_Output_VIP_Go_Geo_Uniques extends QM_Output_Html {
 		add_filter( 'qm/output/menus', array( $this, 'admin_menu' ), 90 );
 	}
 
+	public function name() {
+		return esc_html__( 'VIP Go Geo Uniques', 'qm-vip-geo-vary-cache' );
+	}
+
 	/**
 	 * @param array $menu Array of menu items 
 	 */
