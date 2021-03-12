@@ -26,7 +26,7 @@ class QM_VIP_Cache_Test extends QM_VIP_Base_Test {
 
 	public function test_output_include_group_name_with_value() {
 		// Set cookie value to mock a segment 
-		$_COOKIE = [
+		$_COOKIE = [ // phpcs:ignore
 			'vip-go-seg' => 'test2_--_value2',
 		];
 
